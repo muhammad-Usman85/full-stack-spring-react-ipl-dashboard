@@ -10,6 +10,13 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.batch.item.ItemProcessor;
 
+/**
+ * class to handle process data
+ * 
+ * @author muhammad_usman
+ *
+ */
+
 public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
 
     private static final Logger logs = LoggerFactory.getLogger(MatchDataProcessor.class);
@@ -29,12 +36,12 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
 
         if ("bat".equals(matchInput.getToss_decision())) {
             firstInningsTeam = matchInput.getToss_winner();
-            secondInningsTeam = matchInput.getToss_winner().equals(matchInput.getTeam1()) 
-            ? matchInput.getTeam2() : matchInput.getTeam1();
+            secondInningsTeam = matchInput.getToss_winner().equals(matchInput.getTeam1()) ? matchInput.getTeam2()
+                    : matchInput.getTeam1();
         } else {
             secondInningsTeam = matchInput.getToss_winner();
-            firstInningsTeam = matchInput.getToss_winner().equals(matchInput.getTeam1()) 
-            ? matchInput.getTeam2() : matchInput.getTeam1();
+            firstInningsTeam = matchInput.getToss_winner().equals(matchInput.getTeam1()) ? matchInput.getTeam2()
+                    : matchInput.getTeam1();
         }
         match.setTeam1(firstInningsTeam);
         match.setTeam2(secondInningsTeam);
