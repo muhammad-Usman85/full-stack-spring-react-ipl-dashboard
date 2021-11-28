@@ -12,4 +12,6 @@ public interface TeamService {
     
     public List<Match> getTeamMatches(String teamName, LocalDate startDate, LocalDate endDate);
 
+    public Iterable<Team> getAllTeam();
+
 }

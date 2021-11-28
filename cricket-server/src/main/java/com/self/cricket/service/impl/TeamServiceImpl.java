@@ -39,4 +39,9 @@ public class TeamServiceImpl implements TeamService {
             );
     }
 
+    @Override
+    public Iterable<Team> getAllTeam() {
+        return this.teamRepository.findAll();
+    }
+
 }

@@ -45,5 +45,12 @@ public class TeamController {
         List<Match> matchList = teamService.getTeamMatches(teamName, startDate, endDate);
         return new ResponseEntity<List<Match>>(matchList, HttpStatus.OK); 
     }
+
+    @GetMapping(value="/")
+    public Iterable<Team> getAllTeams() {
+        return teamService.getAllTeam();
+
+    }
+    
     
 }

@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { MatchDetailCard } from "../../components";
-import { YearSelector } from "../../components/yearSelector/YearSelector";
+import { YearSelector } from "../../components";
 import "./MatchPage.scss";
 
 export const MatchPage = () => {
