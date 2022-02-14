@@ -1,6 +1,7 @@
 import "./HomePage.scss";
 import { React, useEffect, useState } from "react";
 import { TeamTitle } from "../../components/teamTitle/TeamTitle";
+import { SlideShow } from "../../components/slideShow/SlideShow";
 
 export const HomePage = () => {
   const [teams, setTeams] = useState([]);
@@ -18,6 +19,7 @@ export const HomePage = () => {
 
   return (
     <div className="HomePage">
+      <SlideShow />
       <div className="header-section">
         <h1 className="app-name"> Cricket Dashboard </h1>
       </div>
